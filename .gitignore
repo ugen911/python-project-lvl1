@@ -1,1 +1,6 @@
 .venv
+
+brain_games/__pycache__/cli.cpython-38.pyc
+
+brain_games/scripts/__pycache__/brain_games.cpython-38.pyc
+
