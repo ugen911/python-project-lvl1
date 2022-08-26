@@ -14,16 +14,22 @@ def even_number():
         random_number = randint(0,100)
         print(f'Question:{random_number}')
         answer = prompt.string('Your answer: ')  
-        if random_number//2 == 0 and answer == 'yes':
-            counter_right_answer += 1
+        if random_number // 2 == 0 and answer == 'yes' or random_number // 2 == 1 and answer == 'no':
             return True
-        return False
+        return answer
     
     while counter_right_answer < 3:
         if is_right_answer() == True:
             print('Correct')
+            counter_right_answer += 1
         else:
-            print()
+            print("'yes' is wrong answer ;(. Correct answer was 'no'./nLet's try again, Bill!")
+            break
+    print("Congratulations, Bill!")
+
+    even_number()
+
+
 
 
 
