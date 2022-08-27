@@ -38,8 +38,6 @@ def even_number():
     if counter_right_answer == 3:
         print (f'Congratulation {username}')    
         
-    
-
 
 
 def main():
