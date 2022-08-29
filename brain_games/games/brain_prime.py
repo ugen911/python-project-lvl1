@@ -11,8 +11,10 @@ def is_prime_number():
     counter_right_answer = 0
     
     while counter_right_answer < round_count:
+        right_answer = 'no'
+        random_number = randint(0, 100)
+        question = str(random_number)
        
-        
         result = checking_correct(task=task, question=question, 
                                   right_answer=right_answer, 
                                   user_name=username)
@@ -26,7 +28,7 @@ def is_prime_number():
 
 
 def main():
-    miss_number()
+    is_prime_number()
 
 
 if __name__ == '__main__':
