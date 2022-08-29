@@ -4,10 +4,8 @@ from brain_games.scripts.game_logic import checking_correct
 from random import randint
 
 
-task = 'Answer "yes" if the number is even, otherwise answer "no".'
-
-
-def even_number(task):
+def even_number():
+    task = 'Answer "yes" if the number is even, otherwise answer "no".'
     username = welcome_user()
     counter_right_answer = 0
     while counter_right_answer < 3:
@@ -16,9 +14,8 @@ def even_number(task):
         question = str(random_number)
         if random_number % 2 == 0:
             right_answer = 'yes'
-        result = checking_correct(task=task, question=question, 
-                                   right_answer=right_answer, 
-                                   user_name=username)
+        result = checking_correct(task=task, question=question,
+                                  right_answer=right_answer, user_name=username)
         if result:
             counter_right_answer += 1
         else:
@@ -28,7 +25,7 @@ def even_number(task):
 
 
 def main():
-    even_number(task=task)
+    even_number()
 
 
 if __name__ == '__main__':

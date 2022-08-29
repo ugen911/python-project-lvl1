@@ -16,13 +16,13 @@ def calc(operators, task):
         random_number1 = randint(0, 100)
         random_number2 = randint(0, 100)
         random_operator = choice(operators)
-        question = str(random_number1)+random_operator+str(random_number2)
+        question = str(random_number1) + random_operator + str(random_number2)
         right_answer = str(eval(question))
-        result = checking_correct(task=task, question=question, 
-                                  right_answer=right_answer, 
+        result = checking_correct(task=task, question=question,
+                                  right_answer=right_answer,
                                   user_name=username)
         if result:
-            counter_right_answer +=1 
+            counter_right_answer += 1
         else:
             break
     if counter_right_answer == round_count:
