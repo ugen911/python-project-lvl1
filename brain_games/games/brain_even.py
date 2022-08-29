@@ -28,7 +28,7 @@ def even_number(task):
 
 
 def main():
-    even_number()
+    even_number(task=task)
 
 
 if __name__ == '__main__':

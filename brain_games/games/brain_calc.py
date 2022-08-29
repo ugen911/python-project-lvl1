@@ -8,7 +8,7 @@ operators = ['+', '-', '*']
 task = 'What is the result of the expression?'
 
 
-def calc(operators=operators, task = task):
+def calc(operators, task):
     round_count = 3
     username = welcome_user()
     counter_right_answer = 0
@@ -30,7 +30,7 @@ def calc(operators=operators, task = task):
 
 
 def main():
-    calc()
+    calc(operators=operators, task=task)
 
 
 if __name__ == '__main__':

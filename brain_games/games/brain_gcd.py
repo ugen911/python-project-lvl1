@@ -7,7 +7,7 @@ import math
 
 task = 'Find the greatest common divisor of given numbers.'
 
-def gcd(task=task):
+def gcd(task):
     round_count = 3
     username = welcome_user()
     counter_right_answer = 0
@@ -27,7 +27,7 @@ def gcd(task=task):
         print(f'Congratulation {username}')
 
 def main():
-    gcd()
+    gcd(task=task)
 
 
 if __name__ == '__main__':
