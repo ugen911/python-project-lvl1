@@ -1,38 +1,25 @@
 #!/usr/bin/env python3
-
+from brain_games.cli import welcome_user
+from brain_games.scripts.game_logic import checking_correct
 from random import randint
-import prompt
 
 
-def welcome_user():
-    username = prompt.string('May I have your name? ')
-    print(f'Hello {username}!')
-    return username
+task = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def even_number():
+def even_number(task):
     username = welcome_user()
     counter_right_answer = 0
-
-    def is_right_answer():
-        right_answer = ''
-        print('Answer "yes" if the number is even, otherwise answer "no".')
+    while counter_right_answer < 3:
+        right_answer = 'no'
         random_number = randint(0, 100)
-        print(f'Question:{random_number}')
-        answer = prompt.string('Your answer: ')
+        question = str(random_number)
         if random_number % 2 == 0:
             right_answer = 'yes'
-        else:
-            right_answer = 'no'
-        if answer == right_answer:
-            print('Correct')
-            return True
-        else:
-            print(f'''"{answer}" is wrong answer ;(. Correct answer was "{right_answer}".
-            Let's try again, {username}''')
-
-    while counter_right_answer < 3:
-        if is_right_answer():
+        result = checking_correct(task=task, question=question, 
+                                   right_answer=right_answer, 
+                                   user_name=username)
+        if result:
             counter_right_answer += 1
         else:
             break

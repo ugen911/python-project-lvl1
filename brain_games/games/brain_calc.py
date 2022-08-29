@@ -3,12 +3,16 @@ from brain_games.cli import welcome_user
 from brain_games.scripts.game_logic import checking_correct
 from random import randint, choice
 
-def calc():
+
+operators = ['+', '-', '*']
+task = 'What is the result of the expression?'
+
+
+def calc(operators=operators, task = task):
+    round_count = 3
     username = welcome_user()
     counter_right_answer = 0
-    operators = ['+', '-', '*']
-    task = 'What is the result of the expression?'
-    while counter_right_answer < 3:
+    while counter_right_answer < round_count:
         random_number1 = randint(0, 100)
         random_number2 = randint(0, 100)
         random_operator = choice(operators)
@@ -21,7 +25,7 @@ def calc():
             counter_right_answer +=1 
         else:
             break
-    if counter_right_answer == 3:
+    if counter_right_answer == round_count:
         print(f'Congratulation {username}')
 
 
