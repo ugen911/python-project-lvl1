@@ -3,7 +3,7 @@ import prompt
 
 # the function finds out if the user's statement is correct
 def checking_correct(question, right_answer, user_name):
-    print(question)
+    print(f'Question: {question}')
     user_answer = prompt.string('Your answer: ')
     if user_answer == right_answer:
         print('Correct!')
