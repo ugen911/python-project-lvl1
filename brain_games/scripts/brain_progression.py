@@ -27,6 +27,7 @@ def miss_number():
                 question = question + ' ' + '..'
             else:
                 question = question + ' ' + str(i)
+        question = question.strip()
 
         right_answer = str(element_progression)
 
