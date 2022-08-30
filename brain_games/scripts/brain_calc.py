@@ -15,7 +15,7 @@ def calc():
         random_number1 = randint(0, 100)
         random_number2 = randint(0, 100)
         random_operator = choice(operators)
-        question = str(random_number1) + random_operator + str(random_number2)
+        question = f'{random_number1} {random_operator} {random_number2}'
         right_answer = str(eval(question))
         result = checking_correct(question=question,
                                   right_answer=right_answer,
