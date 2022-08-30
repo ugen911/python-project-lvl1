@@ -9,9 +9,11 @@ def checking_correct(question, right_answer, user_name):
         print('Correct!')
         return True
     else:
-        print(f'\'{user_answer}\' is wrong answer ;(. Correct answer was \'{right_answer}\'.\nLet\'s try again, {user_name}!')
+        print(f'\'{user_answer}\' is wrong answer ;(.'
+              f'Correct answer was \'{right_answer}\'.'
+              f'\nLet\'s try again, {user_name}!')
 
 
-def congratulation_user(counter_right_answer, username, round_count = 3):
+def congratulation_user(counter_right_answer, username, round_count=3):
     if counter_right_answer == round_count:
         print(f'Congratulations, {username}!')
