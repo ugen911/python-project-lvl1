@@ -1,5 +1,5 @@
 from brain_games.cli import welcome_user
-from brain_games.scripts.game_logic import checking_correct
+from brain_games.scripts.game_logic import checking_correct, congratulation_user
 from random import randint
 
 
@@ -7,6 +7,7 @@ def is_prime_number():
     task = 'Answer "yes" if given number is prime. Otherwise answer "no".'
     round_count = 3
     username = welcome_user()
+    print(task)
     counter_right_answer = 0
 
     while counter_right_answer < round_count:
@@ -17,15 +18,14 @@ def is_prime_number():
             if random_number % i == 0:
                 right_answer = 'no'
 
-        result = checking_correct(task=task, question=question,
+        result = checking_correct(question=question,
                                   right_answer=right_answer,
                                   user_name=username)
         if result:
             counter_right_answer += 1
         else:
             break
-    if counter_right_answer == round_count:
-        print(f'Congratulation {username}')
+    congratulation_user(counter_right_answer, username)
 
 
 def main():
